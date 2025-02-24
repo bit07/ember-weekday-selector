@@ -1,1 +1,6 @@
-/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+ .container {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr;
+   grid-column-gap: 20px grid-row-gap: 20px justify-items: stretch align-items: stretch
+ }/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */

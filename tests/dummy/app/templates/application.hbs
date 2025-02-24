@@ -1,5 +1,72 @@
-{{page-title "Dummy"}}
+<div>
+  <p>Monday: {{this.myWeek.monday}}</p>
+  <p>Tuesday: {{this.myWeek.tuesday}}</p>
+  <p>Wednesday: {{this.myWeek.wednesday}}</p>
+  <p>Thursday: {{this.myWeek.thursday}}</p>
+  <p>Friday: {{this.myWeek.friday}}</p>
+  <p>Saturday: {{this.myWeek.saturday}}</p>
+  <p>Sunday: {{this.myWeek.sunday}}</p>
+</div>
 
-<h2 id="title">Welcome to Ember</h2>
+<p>Click!:{{this.message}}</p>
 
-{{outlet}}
+<div>
+  <h1>Editable</h1>
+  <div class="container">
+    <WeekdaySelector @week={{this.myWeek}} @onClick={{this.onClick}} />
+  </div>
+</div>
+<h1>Readonly</h1>
+<div>
+  <div class="container">
+    <WeekdaySelector
+      @week={{this.myWeek}}
+      @onClick={{this.onClick}}
+      @readOnly={{true}}
+    />
+  </div>
+</div>
+<div>
+  <h1>Start on Monday</h1>
+  <div class="container">
+    <WeekdaySelector
+      @startOfWeek="monday"
+      @week={{this.myWeek}}
+      @onClick={{this.onClick}}
+    />
+  </div>
+</div>
+<div>
+  <h1>Start on Sunday</h1>
+  <div class="container">
+    <WeekdaySelector
+      @startOfWeek="sunday"
+      @week={{this.myWeek}}
+      @onClick={{this.onClick}}
+    />
+  </div>
+</div>
+<div>
+  <h1>Width & height 50px</h1>
+  <div class="container">
+    <WeekdaySelector
+      @week={{this.myWeek}}
+      @onClick={{this.onClick}}
+      @maxChars={{4}}
+      @svgWidth={{50}}
+      @svgHeight={{50}}
+    />
+  </div>
+</div>
+<div>
+  <h1>Width & height 30px</h1>
+  <div class="container">
+    <WeekdaySelector
+      @week={{this.myWeek}}
+      @onClick={{this.onClick}}
+      @maxChars={{1}}
+      @svgWidth={{30}}
+      @svgHeight={{30}}
+    />
+  </div>
+</div>

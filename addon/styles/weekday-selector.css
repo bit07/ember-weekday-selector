@@ -1,0 +1,53 @@
+.ws-day {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.ws-day-sunday {
+  stroke-width: 2;
+  stroke: #f44336;
+  fill: #ebf8be;
+}
+
+.ws-day-saturday {
+  stroke: #2196f3;
+  fill: #ebf8be;
+}
+
+.ws-selected {
+  fill: #494a49;
+  stroke-width: 1;
+}
+
+.ws-selected-text {
+  fill: #dcdcdc;
+}
+
+.ws-unselected {
+  fill: #dcdcdc;
+  stroke-width: none;
+  stroke: none;
+}
+
+.ws-unselected-text {
+  fill: #494a49;
+}
+
+.ws-day:hover {
+  fill: #4eaadf;
+}
+
+.ws-readonly {
+  pointer-events: none;
+  user-select: none;
+}
+
+.ws-container {
+  display: grid;
+  grid-template-columns: 40px 40px 40px 40px 40px 40px 40px;
+  grid-template-rows: 40px;
+  grid-column-gap: 10px;
+  justify-items: stretch;
+}

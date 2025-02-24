@@ -1,0 +1,37 @@
+<div class="ws-container">
+  {{#each this.days as |day index|}}
+    <div ...attributes>
+      {{! template-lint-disable no-invalid-interactive }}
+      <svg
+        width={{this.svgWidth}}
+        height={{this.svgHeight}}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox={{this.viewBox}}
+        {{on "click" (fn this.onClick day)}}
+      >
+        {{! template-lint-disable no-invalid-interactive }}
+        <g
+          class="ws-day {{if @readOnly 'ws-readonly'}}"
+          id="{{unique-id}}-group-{{index}}"
+        >
+          <circle
+            class="ws-day-{{day.label}} {{if day.value 'ws-selected' 'ws-unselected'}}"
+            id="{{unique-id}}-ellipse-{{index}}"
+            cx="20"
+            cy="20"
+            r="17"
+          />
+          <text
+            class="ws-day-{{day.label}} {{if day.value 'ws-selected-text' 'ws-unselected-text'}}"
+            id="{{unique-id}}-text-{{index}}"
+            x="20"
+            y="24"
+            text-anchor="middle"
+          >
+            {{this.lop day.label this.maxChars}}
+          </text>
+        </g>
+      </svg>
+    </div>
+  {{/each}}
+</div>
