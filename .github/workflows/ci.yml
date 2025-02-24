@@ -46,6 +46,10 @@ jobs:
         run: npm install --no-shrinkwrap
       - name: Run Tests
         run: npm run test:ember
+      - name: Git configuration (fix)
+        run: |
+          git config --global --add safe.directory /home/runner/work/ember-weekday-selector/ember-weekday-selector
+          git config --local --unset-all http.https://github.com/.extraheader || true
 
   try-scenarios:
     name: ${{ matrix.try-scenario }}
