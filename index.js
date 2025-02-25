@@ -1,8 +1,7 @@
 'use strict';
 
-module.exports = {
-  name: require('./package').name,
-  included: function (/* app */) {
-    this._super.included.apply(this, arguments);
-  },
-};
+import { name } from './package';
+export { name };
+export function included(/* app */) {
+  this._super.included.apply(this, arguments);
+}
