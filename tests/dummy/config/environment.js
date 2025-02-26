@@ -1,6 +1,6 @@
 'use strict';
 
-export default function (environment) {
+module.exports = function (environment) {
   const ENV = {
     modulePrefix: 'dummy',
     environment,
@@ -45,4 +45,4 @@ export default function (environment) {
   }
 
   return ENV;
-}
+};

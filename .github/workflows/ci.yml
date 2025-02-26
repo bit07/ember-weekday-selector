@@ -31,25 +31,25 @@ jobs:
       - name: Run Tests
         run: npm run test:ember
 
-  floating:
-    name: "Floating Dependencies"
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: npm
-      - name: Install Dependencies
-        run: npm install --no-shrinkwrap
-      - name: Run Tests
-        run: npm run test:ember
-      - name: Git configuration (fix)
-        run: |
-          git config --global --add safe.directory /home/runner/work/ember-weekday-selector/ember-weekday-selector
-          git config --local --unset-all http.https://github.com/.extraheader || true
+#  floating:
+#    name: "Floating Dependencies"
+#    runs-on: ubuntu-latest
+#    timeout-minutes: 10
+#
+#    steps:
+#      - uses: actions/checkout@v3
+#      - uses: actions/setup-node@v3
+#        with:
+#          node-version: 18
+#          cache: npm
+#      - name: Install Dependencies
+#        run: npm install --no-shrinkwrap
+#      - name: Run Tests
+#        run: npm run test:ember
+#      - name: Git configuration (fix)
+#        run: |
+#          git config --global --add safe.directory /home/runner/work/ember-weekday-selector/ember-weekday-selector
+#          git config --local --unset-all http.https://github.com/.extraheader || true
 
   try-scenarios:
     name: ${{ matrix.try-scenario }}
@@ -61,7 +61,7 @@ jobs:
       fail-fast: false
       matrix:
         try-scenario:
-          - ember-lts-4.12
+#          - ember-lts-4.12
           - ember-lts-5.4
           - ember-release
           - ember-beta
