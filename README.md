@@ -1,6 +1,6 @@
 # ember-weekday-selector
 
-The ember-weekday-selector is an Ember.js addon designed to provide a user interface component for selecting weekdays. It is compatible with Ember.js v4.12 or above, Ember CLI v4.12 or above, and Node.js v18 or above.
+The ember-weekday-selector is an Ember.js addon designed to provide a user interface component for selecting weekdays. It is compatible with Ember.js v6.1 or above, Ember CLI v6.1 or above, and Node.js v22 or above.
 
 Key Features:
 - Weekday Selection: Allows users to select one or more weekdays.
